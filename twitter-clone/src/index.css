@@ -60,7 +60,7 @@ body {
   color: rgb(0, 136, 255);
 }
 
-.nav-btn button{
+.nav-btn button {
   width: 200px;
   border-radius: 50px;
   margin-left: 10%;
@@ -184,6 +184,11 @@ body {
   color: #5B7083;
   font-size: 13px;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+.icon-item p:hover {
+  color: #1DA1F2;
 }
 
 .right-side-bar-container {
@@ -323,11 +328,11 @@ body {
   color: #5B7083;
 }
 
-.follow-btn{
+.follow-btn {
   margin-left: auto;
 }
 
-.follow-btn button{
+.follow-btn button {
   border-radius: 50px;
 }
 
