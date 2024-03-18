@@ -1,4 +1,6 @@
-import articleImage from '../assets/pfp.png'
+import articleImageOne from '../assets/articleone.webp';
+import articleImageTwo from '../assets/articleone.webp';
+import articleImageThree from '../assets/articletwo.webp';
 
 function CreateArticle({ type, articleDate, articleDesc, articleImg, articleTrend }) {
   return (
@@ -37,21 +39,21 @@ const rightSideBar = () => {
             type="Europe"
             articleDate="3/17/2024"
             articleDesc="Europe invades someone"
-            articleImg={articleImage}
+            articleImg={articleImageOne}
             articleTrend="Trending with #lmao"
           />
           <CreateArticle
             type="Sports"
             articleDate="3/18/2024"
             articleDesc="India vs Australia: India hold on to earn a draw on Day 5 in Sydney Test"
-            articleImg={articleImage}
+            articleImg={articleImageTwo}
             articleTrend="Trending with #football"
           />
           <CreateArticle
             type="US news"
             articleDate="3/11/2024"
             articleDesc="Random bill passes the house"
-            articleImg={articleImage}
+            articleImg={articleImageThree}
             articleTrend="Trending with #idfk"
           />
         </div>
