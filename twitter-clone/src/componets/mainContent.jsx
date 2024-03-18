@@ -1,6 +1,9 @@
+import { postDesk, postDeskTwo } from './postDesc';
 import pfpImage from '../assets/pfp.png';
 import commentIcon from '../assets/icons/comment.svg';
-import likeIcon from '../assets/icons/like.svg'
+import repostIcon from '../assets/icons/repost.svg';
+import likeIcon from '../assets/icons/like.svg';
+import shareIcon from '../assets/icons/share.svg';
 
 function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
   return (
@@ -9,26 +12,27 @@ function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
         <img src={pfp}></img>
       </div>
       <div className="post-content-inner-container">
-      <div className="top-bar">
-        <div className="top-text">
-          <h1>{realName}</h1>
-          <h2>{userName}</h2>
-          <p>•</p>
-          <h2>{timePosted}</h2>
+        <div className="top-bar">
+          <div className="top-text">
+            <h1>{realName}</h1>
+            <h2>{userName}</h2>
+            <p>•</p>
+            <h2>{timePosted}</h2>
+          </div>
         </div>
-      </div>
-      <div className="post-inner-content">
-        <div className="post-desc">
-          <p>{postDesc}</p>
+        <div className="post-inner-content">
+          <div className="post-desc">
+            <p>{postDesc}</p>
+          </div>
         </div>
-      </div>
-      <div className="bottom-bar">
-        <div className="icon-row">
-          <img src={commentIcon} alt="" />
-          <img src={likeIcon} alt="" />
-          <img src="" alt="" />
+        <div className="bottom-bar">
+          <div className="icon-row">
+            <img src={commentIcon} alt="comment" />
+            <img src={repostIcon} alt="repost" />
+            <img src={likeIcon} alt="like" />
+            <img src={shareIcon} alt="share" />
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );
@@ -44,7 +48,14 @@ export default function DisplayPost() {
         realName="Bob"
         userName="@bob123"
         timePosted="5s"
-        postDesc="LOL"
+        postDesc={postDesk.postDescPara}
+      />
+      <CreatePost
+        pfp={pfpImage}
+        realName="Some dude"
+        userName="@throwaway6382"
+        timePosted="2h"
+        postDesc={postDeskTwo.postDescPara}
       />
     </>
   );

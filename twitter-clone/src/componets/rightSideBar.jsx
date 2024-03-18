@@ -1,6 +1,8 @@
 import articleImageOne from '../assets/articleone.webp';
 import articleImageTwo from '../assets/articleone.webp';
 import articleImageThree from '../assets/articletwo.webp';
+import profilePicOne from '../assets/pfp.png';
+import profilePicTwo from '../assets/pfp.png';
 
 function CreateArticle({ type, articleDate, articleDesc, articleImg, articleTrend }) {
   return (
@@ -25,7 +27,27 @@ function CreateArticle({ type, articleDate, articleDesc, articleImg, articleTren
   )
 };
 
-const rightSideBar = () => {
+function CreateFollowSuggest({ profilePic, fullName, Username }) {
+  return (
+    <div className="follow-suggest-inner-content">
+      <div className="person-row">
+        <div className="person-pfp">
+          <img src={profilePic} alt="" />
+        </div>
+        <div className="person-text">
+          <h1>{fullName}</h1>
+          <h1>{Username}</h1>
+        </div>
+        <div className="follow-btn">
+          <button>Follow</button>
+        </div>
+      </div>
+      <hr></hr>
+    </div>
+  )
+}
+
+const RightSideBar = () => {
   return (
     <div className="right-side-bar-container">
       <div className="search-bar">
@@ -62,4 +84,26 @@ const rightSideBar = () => {
   );
 }
 
-export default rightSideBar;
+const FollowSuggest = () => {
+  return (
+    <div className="follow-suggest-container">
+      <h1>Who to follow</h1>
+      <hr></hr>
+      <CreateFollowSuggest
+        profilePic={profilePicOne}
+        fullName="Kyle Morgan"
+        Username="@somedude781"
+      />
+      <CreateFollowSuggest
+        profilePic={profilePicOne}
+        fullName="Beth Smith"
+        Username="@smith808"
+      />
+      <div className="follow-suggest-bottom-bar">
+        <a>Show more</a>
+      </div>
+    </div>
+  );
+}
+
+export { RightSideBar, FollowSuggest };

@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import Logo from './assets/icons/logo.svg'
 import './index.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Landing from './pages/Landing';
 import About from './pages/About';
 import Support from './pages/Support';
-import RightSideBar from './componets/rightSideBar';
+import {RightSideBar, FollowSuggest} from './componets/rightSideBar';
 function App() {
 
   return (
@@ -13,7 +14,7 @@ function App() {
         <div className="nav">
           <nav>
             <div className="nav-inner-content">
-              <h1>Not Twitter</h1>
+              <img src={Logo} alt="" />
               <ul>
                 <div className="nav-item">
                   <li><Link to="/">Home</Link></li>
@@ -36,7 +37,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/Support" element={<Support />} />
         </Routes>
-        <RightSideBar />
+        <div className="right-side-bar">
+          <RightSideBar />
+          <FollowSuggest />
+        </div>
       </div>
     </Router>
   );
