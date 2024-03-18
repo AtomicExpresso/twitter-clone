@@ -41,6 +41,10 @@ body {
   flex-direction: row;
 }
 
+.home-container{
+  width: 100%;
+}
+
 .home-hero-content {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 10px;
@@ -59,7 +63,6 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   background-color: white;
   padding: 10px;
-  width: 300px;
   border-radius: 3px;
 }
 
