@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './index.css';
-import Navbar from './componets/Navbar';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Landing from './pages/Landing';
 import About from './pages/About';

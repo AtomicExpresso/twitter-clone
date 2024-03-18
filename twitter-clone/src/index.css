@@ -11,12 +11,18 @@ body {
 
 .home-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
 .post-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 3px;
 }
 
 .top-text{
@@ -25,6 +31,10 @@ body {
   gap: 3px;
 }
 
+.pfp img{
+  height: 60px;
+  border-radius: 50%;
+}
 .top-text h1,
 .top-text h2{
   font-size: 15px;
