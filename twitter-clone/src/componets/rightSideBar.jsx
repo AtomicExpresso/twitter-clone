@@ -54,7 +54,7 @@ const RightSideBar = () => {
   return (
     <div className="right-side-bar-container">
       <div className="search-bar">
-        <input type="text" placeholder="Search something..." />
+        <input type="text" placeholder="Search twitter..." />
       </div>
       <div className="news-content">
         <h1>What's Happening?</h1>
@@ -63,7 +63,7 @@ const RightSideBar = () => {
           <CreateArticle
             type="Europe"
             articleDate="3/17/2024"
-            articleDesc="Europe invades someone"
+            articleDesc="Ukraine joins EU"
             articleImg={articleImageOne}
             articleTrend="Trending with #lmao"
           />
