@@ -41,7 +41,7 @@ function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
             </div>
             <div className="icon-item">
               <img src={shareIcon} alt="share" />
-              <p>12</p>
+              <p >12</p>
             </div>
           </div>
         </div>
