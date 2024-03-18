@@ -9,14 +9,27 @@ function App() {
   return (
     <Router>
       <div className='main-container'>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/About">Explore</Link></li>
-            <li><Link to="/About">Market</Link></li>
-            <li><Link to="/About">Settings</Link></li>
-          </ul>
-        </nav>
+        <div className="nav">
+          <nav>
+            <div className="nav-inner-content">
+            <h1>Not Twitter</h1>
+            <ul>
+              <div className="nav-item">
+                <li><Link to="/">Home</Link></li>
+              </div>
+              <div className="nav-item">
+                <li><Link to="/About">Explore</Link></li>
+              </div>
+              <div className="nav-item">
+                <li><Link to="/About">Market</Link></li>
+              </div>
+              <div className="nav-item">
+                <li><Link to="/About">Settings</Link></li>
+              </div>
+            </ul>
+            </div>
+          </nav>
+        </div>
         <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />

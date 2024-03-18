@@ -9,41 +9,94 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.home-container {
+.nav {
+  width: 200px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.nav h1 {
+  margin-bottom: 20px;
+}
+
+.nav-inner-content {
+  margin-left: 10px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+  color: black;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: rgb(0, 136, 255);
+}
+
+.main-container {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+}
+
+.home-hero-content {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px;
+}
+
+.home-hero-content h1{
+  font-size: 19px;
 }
 
 .post-content {
   display: flex;
   flex-direction: row;
+  margin-top: 5px;
+  margin: auto;
   gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: white;
   padding: 10px;
   width: 300px;
   border-radius: 3px;
 }
 
-.top-text{
+.top-text {
   display: flex;
   flex-direction: row;
   gap: 3px;
 }
 
-.pfp img{
+.pfp img {
   height: 60px;
   border-radius: 50%;
-}
-.top-text h1,
-.top-text h2{
-  font-size: 15px;
+  cursor: pointer;
 }
 
-.top-text h2{
+.top-text h1,
+.top-text h2 {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.top-text h2 {
   color: #5B7083;
+  font-weight: 500;
+}
+
+.icon-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.icon-row img {
+  cursor: pointer;
 }
 
 .main-container {
   display: flex;
+  gap: 10px;
 }

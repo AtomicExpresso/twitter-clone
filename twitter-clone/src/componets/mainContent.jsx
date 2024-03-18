@@ -1,4 +1,7 @@
-import pfpImage from '../assets/pfp.png'; // Import the profile picture image
+import pfpImage from '../assets/pfp.png';
+import commentIcon from '../assets/icons/comment.svg';
+import likeIcon from '../assets/icons/like.svg'
+
 
 
 function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
@@ -12,6 +15,7 @@ function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
         <div className="top-text">
           <h1>{realName}</h1>
           <h2>{userName}</h2>
+          <p>•</p>
           <h2>{timePosted}</h2>
         </div>
       </div>
@@ -22,8 +26,8 @@ function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
       </div>
       <div className="bottom-bar">
         <div className="icon-row">
-          <img src="" alt="" />
-          <img src="" alt="" />
+          <img src={commentIcon} alt="" />
+          <img src={likeIcon} alt="" />
           <img src="" alt="" />
         </div>
       </div>
