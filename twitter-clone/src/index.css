@@ -60,10 +60,17 @@ body {
   color: rgb(0, 136, 255);
 }
 
+.nav-btn button{
+  width: 200px;
+  border-radius: 50px;
+  margin-left: 10%;
+}
+
 .nav-bottom-bar {
   display: flex;
   flex-direction: row;
   margin-left: 20px;
+  margin-top: auto;
 }
 
 .nav-bottom-bar-text {
@@ -94,6 +101,7 @@ body {
   font-size: 16px;
   margin-left: 10px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .main-container {

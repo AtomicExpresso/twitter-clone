@@ -47,15 +47,18 @@ function App() {
                 </div>
               </ul>
             </div>
-            <div className="nav-bottom-bar">
-              <img src={profilePic} alt="pfp" />
-              <div className="nav-bottom-bar-text">
-                <h1>John Doe</h1>
-                <h1>@Johndoeoffical</h1>
-              </div>
-              <img src={dotsPfpIcon} alt="settings" />
+            <div className="nav-btn">
+              <button className='btn btn-primary'>Tweet</button>
             </div>
           </nav>
+          <div className="nav-bottom-bar">
+            <img src={profilePic} alt="pfp" />
+            <div className="nav-bottom-bar-text">
+              <h1>John Doe</h1>
+              <h1>@Johndoeoffical</h1>
+            </div>
+            <img src={dotsPfpIcon} alt="settings" />
+          </div>
         </div>
         <Routes>
           <Route exact path="/" element={<Landing />} />
