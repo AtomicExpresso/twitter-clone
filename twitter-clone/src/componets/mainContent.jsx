@@ -2,8 +2,6 @@ import pfpImage from '../assets/pfp.png';
 import commentIcon from '../assets/icons/comment.svg';
 import likeIcon from '../assets/icons/like.svg'
 
-
-
 function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
   return (
     <div className="post-content">

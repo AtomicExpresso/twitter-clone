@@ -1,6 +1,6 @@
 import React from 'react';
-import DisplayPost from '../componets/mainContent'
-import HomeHero from '../componets/homeHero'
+import HomeHero from '../componets/homeHero';
+import DisplayPost from '../componets/mainContent';
 import '../index.css';
 
 function Home() {

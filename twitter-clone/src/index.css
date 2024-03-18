@@ -46,7 +46,7 @@ body {
   padding: 10px;
 }
 
-.home-hero-content h1{
+.home-hero-content h1 {
   font-size: 19px;
 }
 
@@ -94,6 +94,81 @@ body {
 
 .icon-row img {
   cursor: pointer;
+}
+
+.right-side-bar-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.search-bar input {
+  background-color: #EBEEF0;
+  border: none;
+  padding: 10px;
+  width: 280px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.search-bar input:focus {
+  outline: solid 1px rgb(0, 110, 255);
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f9fb;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.news-content h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-inner-content {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.article-inner-bar p {
+  font-size: 15px;
+  font-weight: bold;
+  max-width: 200px;
+}
+
+.article-top-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.article-top-bar h1,
+.article-bottom-bar h1 {
+  font-size: 14px;
+  color: #5B7083;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.article-img {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.article-img img {
+  height: 70px;
+  border-radius: 15px;
 }
 
 .main-container {
