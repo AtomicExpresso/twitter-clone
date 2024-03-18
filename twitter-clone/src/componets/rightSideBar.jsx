@@ -42,7 +42,7 @@ function CreateFollowSuggest({ profilePic, fullName, Username }) {
           <h1>{Username}</h1>
         </div>
         <div className="follow-btn">
-          <button>Follow</button>
+          <button className='btn btn-primary'>Follow</button>
         </div>
       </div>
       <hr></hr>
