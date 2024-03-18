@@ -5,6 +5,8 @@ import ExploreIcon from './assets/icons/explore.svg';
 import BookmarkIcon from './assets/icons/bookmark.svg';
 import ProfileIcon from './assets/icons/profile.svg';
 import moreIcon from './assets/icons/more.svg';
+import profilePic from './assets/pfp.png';
+import dotsPfpIcon from './assets/icons/dots.svg';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Landing from './pages/Landing';
@@ -32,7 +34,7 @@ function App() {
                   <li ><Link to="/About" >Explore</Link></li>
                 </div>
                 <div className="nav-item">
-                <img src={BookmarkIcon} alt="Market" />
+                  <img src={BookmarkIcon} alt="Market" />
                   <li><Link to="/About">Market</Link></li>
                 </div>
                 <div className="nav-item">
@@ -44,6 +46,14 @@ function App() {
                   <li><Link to="/About">Settings</Link></li>
                 </div>
               </ul>
+            </div>
+            <div className="nav-bottom-bar">
+              <img src={profilePic} alt="pfp" />
+              <div className="nav-bottom-bar-text">
+                <h1>John Doe</h1>
+                <h1>@Johndoeoffical</h1>
+              </div>
+              <img src={dotsPfpIcon} alt="settings" />
             </div>
           </nav>
         </div>
