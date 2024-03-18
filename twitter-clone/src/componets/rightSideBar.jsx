@@ -6,6 +6,7 @@ import profilePicTwo from '../assets/pfp.png';
 
 function CreateArticle({ type, articleDate, articleDesc, articleImg, articleTrend }) {
   return (
+    <>
     <div className="article-inner-content">
       <div className="article-col-one">
         <div className="article-top-bar">
@@ -24,6 +25,8 @@ function CreateArticle({ type, articleDate, articleDesc, articleImg, articleTren
         <img src={articleImg} alt="Article image" />
       </div>
     </div>
+    <hr></hr>
+    </>
   )
 };
 

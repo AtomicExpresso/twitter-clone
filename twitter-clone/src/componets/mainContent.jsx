@@ -27,10 +27,22 @@ function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
         </div>
         <div className="bottom-bar">
           <div className="icon-row">
-            <img src={commentIcon} alt="comment" />
-            <img src={repostIcon} alt="repost" />
-            <img src={likeIcon} alt="like" />
-            <img src={shareIcon} alt="share" />
+            <div className="icon-item">
+              <img src={commentIcon} alt="comment" />
+              <p>96</p>
+            </div>
+            <div className="icon-item">
+              <img src={repostIcon} alt="repost" />
+              <p>126</p>
+            </div>
+            <div className="icon-item">
+              <img src={likeIcon} alt="like" />
+              <p>56</p>
+            </div>
+            <div className="icon-item">
+              <img src={shareIcon} alt="share" />
+              <p>12</p>
+            </div>
           </div>
         </div>
       </div>
