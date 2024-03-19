@@ -1,11 +1,12 @@
 import { postDesk, postDeskTwo } from './postDesc';
-import {ProfileOne, ProfileTwo} from '../componets/storage/profileInfo';
+import { ProfileOne, ProfileTwo } from '../componets/storage/profileInfo';
+import dots from '../assets/icons/dots.svg'
 import commentIcon from '../assets/icons/comment.svg';
 import repostIcon from '../assets/icons/repost.svg';
 import likeIcon from '../assets/icons/like.svg';
 import shareIcon from '../assets/icons/share.svg';
 
-function CreatePost({ pfp, realName, userName, timePosted, postDesc, commentCount, repostCount, likeCount, shareCount }) {
+function CreatePost({ pfp, realName, userName, timePosted, postDesc, commentCount, repostCount, likeCount, shareCount, badge }) {
   return (
     <div className="post-content">
       <div className="pfp">
@@ -18,6 +19,7 @@ function CreatePost({ pfp, realName, userName, timePosted, postDesc, commentCoun
             <h2>{userName}</h2>
             <p>•</p>
             <h2>{timePosted}</h2>
+            {badge && <img src={badge} alt="Verified" />}
           </div>
         </div>
         <div className="post-inner-content">
@@ -46,6 +48,9 @@ function CreatePost({ pfp, realName, userName, timePosted, postDesc, commentCoun
           </div>
         </div>
       </div>
+      <div className="post-config">
+        <img src={dots} alt="settings"/>
+      </div>
     </div>
   );
 }
@@ -59,6 +64,7 @@ export default function DisplayPost() {
         pfp={ProfileOne.ProfilePic}
         realName={ProfileOne.ProfileRealName}
         userName={ProfileOne.ProfileUserName}
+        badge={ProfileOne.ProfileBadge}
         timePosted="5s"
         postDesc={postDesk.postDescPara}
         commentCount={5}
@@ -70,6 +76,7 @@ export default function DisplayPost() {
         pfp={ProfileTwo.ProfilePic}
         realName={ProfileTwo.ProfileRealName}
         userName={ProfileTwo.ProfileUserName}
+        badge={ProfileTwo.ProfileBadge}
         timePosted="2h"
         postDesc={postDeskTwo.postDescPara}
         commentCount={35}

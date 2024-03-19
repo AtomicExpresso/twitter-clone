@@ -140,10 +140,19 @@ body {
   padding: 10px;
 }
 
+.top-bar {
+  display: flex;
+  flex-direction: row;
+}
+
 .top-text {
   display: flex;
   flex-direction: row;
   gap: 3px;
+}
+
+.top-text img {
+  height: 20px;
 }
 
 .pfp img {
@@ -161,6 +170,11 @@ body {
 .top-text h2 {
   color: #5B7083;
   font-weight: 500;
+}
+
+.post-config {
+  margin-left: auto;
+  cursor: pointer;
 }
 
 .icon-row {
