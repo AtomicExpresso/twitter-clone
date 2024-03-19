@@ -1,31 +1,30 @@
 import articleImageOne from '../assets/articleone.webp';
 import articleImageTwo from '../assets/articleone.webp';
 import articleImageThree from '../assets/articletwo.webp';
-import profilePicOne from '../assets/pfp.png';
-import profilePicTwo from '../assets/pfp.png';
+import {ProfileThree, ProfileFour} from '../componets/storage/profileInfo';
 
 function CreateArticle({ type, articleDate, articleDesc, articleImg, articleTrend }) {
   return (
     <>
-    <div className="article-inner-content">
-      <div className="article-col-one">
-        <div className="article-top-bar">
-          <h1>{type}</h1>
-          <h1>•</h1>
-          <h1>{articleDate}</h1>
+      <div className="article-inner-content">
+        <div className="article-col-one">
+          <div className="article-top-bar">
+            <h1>{type}</h1>
+            <h1>•</h1>
+            <h1>{articleDate}</h1>
+          </div>
+          <div className="article-inner-bar">
+            <p>{articleDesc}</p>
+          </div>
+          <div className="article-bottom-bar">
+            <h1>{articleTrend}</h1>
+          </div>
         </div>
-        <div className="article-inner-bar">
-          <p>{articleDesc}</p>
-        </div>
-        <div className="article-bottom-bar">
-          <h1>{articleTrend}</h1>
+        <div className="article-img">
+          <img src={articleImg} alt="Article image" />
         </div>
       </div>
-      <div className="article-img">
-        <img src={articleImg} alt="Article image" />
-      </div>
-    </div>
-    <hr></hr>
+      <hr></hr>
     </>
   )
 };
@@ -93,14 +92,14 @@ const FollowSuggest = () => {
       <h1>Who to follow</h1>
       <hr></hr>
       <CreateFollowSuggest
-        profilePic={profilePicOne}
-        fullName="Kyle Morgan"
-        Username="@somedude781"
+        profilePic={ProfileThree.ProfilePic}
+        fullName={ProfileThree.ProfileRealName}
+        Username={ProfileThree.ProfileUserName}
       />
       <CreateFollowSuggest
-        profilePic={profilePicOne}
-        fullName="Beth Smith"
-        Username="@smith808"
+        profilePic={ProfileFour.ProfilePic}
+        fullName={ProfileFour.ProfileRealName}
+        Username={ProfileFour.ProfileUserName}
       />
       <div className="follow-suggest-bottom-bar">
         <a>Show more</a>

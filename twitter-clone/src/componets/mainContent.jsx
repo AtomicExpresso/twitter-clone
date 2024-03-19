@@ -1,11 +1,11 @@
 import { postDesk, postDeskTwo } from './postDesc';
-import pfpImage from '../assets/pfp.png';
+import {ProfileOne, ProfileTwo} from '../componets/storage/profileInfo';
 import commentIcon from '../assets/icons/comment.svg';
 import repostIcon from '../assets/icons/repost.svg';
 import likeIcon from '../assets/icons/like.svg';
 import shareIcon from '../assets/icons/share.svg';
 
-function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
+function CreatePost({ pfp, realName, userName, timePosted, postDesc, commentCount, repostCount, likeCount, shareCount }) {
   return (
     <div className="post-content">
       <div className="pfp">
@@ -29,19 +29,19 @@ function CreatePost({ pfp, realName, userName, timePosted, postDesc }) {
           <div className="icon-row">
             <div className="icon-item">
               <img src={commentIcon} alt="comment" />
-              <p>96</p>
+              <p>{commentCount}</p>
             </div>
             <div className="icon-item">
               <img src={repostIcon} alt="repost" />
-              <p>126</p>
+              <p>{repostCount}</p>
             </div>
             <div className="icon-item">
               <img src={likeIcon} alt="like" />
-              <p>56</p>
+              <p>{likeCount}</p>
             </div>
             <div className="icon-item">
               <img src={shareIcon} alt="share" />
-              <p >12</p>
+              <p >{shareCount}</p>
             </div>
           </div>
         </div>
@@ -56,18 +56,26 @@ export default function DisplayPost() {
   return (
     <>
       <CreatePost
-        pfp={pfpImage}
-        realName="Bob"
-        userName="@bob123"
+        pfp={ProfileOne.ProfilePic}
+        realName={ProfileOne.ProfileRealName}
+        userName={ProfileOne.ProfileUserName}
         timePosted="5s"
         postDesc={postDesk.postDescPara}
+        commentCount={5}
+        repostCount={1}
+        likeCount={20}
+        shareCount={450}
       />
       <CreatePost
-        pfp={pfpImage}
-        realName="Some dude"
-        userName="@throwaway6382"
+        pfp={ProfileTwo.ProfilePic}
+        realName={ProfileTwo.ProfileRealName}
+        userName={ProfileTwo.ProfileUserName}
         timePosted="2h"
         postDesc={postDeskTwo.postDescPara}
+        commentCount={35}
+        repostCount={100}
+        likeCount={70}
+        shareCount={10}
       />
     </>
   );
