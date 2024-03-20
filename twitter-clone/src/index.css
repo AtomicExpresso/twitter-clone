@@ -479,9 +479,14 @@ body {
 }
 
 .profile-content-tabs h1 {
-  font-size: 20px;
+  font-size: 17px;
   margin: 0 20px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.profile-content-tabs h1:hover {
+  color: rgb(0, 136, 255);
 }
 
 .main-container {

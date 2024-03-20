@@ -3,6 +3,7 @@ import HomeIcon from './assets/icons/home.svg';
 import ExploreIcon from './assets/icons/explore.svg';
 import BookmarkIcon from './assets/icons/bookmark.svg';
 import ProfileIcon from './assets/icons/profile.svg';
+import MessagesIcon from './assets/icons/messages.svg';
 import moreIcon from './assets/icons/more.svg';
 import dotsPfpIcon from './assets/icons/dots.svg';
 import './index.css';
@@ -43,6 +44,10 @@ function App() {
                 <div className="nav-item">
                   <img src={BookmarkIcon} alt="Market" />
                   <li><NavLink to="/Market" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Market</NavLink ></li>
+                </div>
+                <div className="nav-item">
+                  <img src={MessagesIcon} alt="Messages" />
+                  <li><NavLink to="/Messages" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Messages</NavLink ></li>
                 </div>
                 <div className="nav-item">
                   <img src={ProfileIcon} alt="Profile" />
