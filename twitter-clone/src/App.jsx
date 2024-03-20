@@ -8,7 +8,7 @@ import moreIcon from './assets/icons/more.svg';
 import profilePic from './assets/pfp.png';
 import dotsPfpIcon from './assets/icons/dots.svg';
 import './index.css';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Landing from './pages/Landing';
 import About from './pages/About';
 import Support from './pages/Support';
@@ -27,23 +27,24 @@ function App() {
               <ul>
                 <div className="nav-item">
                   <img src={HomeIcon} alt="Home" />
-                  <li><Link to="/">Home</Link></li>
+                  <li><NavLink to="/" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}
+                  >Home</NavLink ></li>
                 </div>
                 <div className="nav-item">
                   <img src={ExploreIcon} alt="Explore" />
-                  <li ><Link to="/About" >Explore</Link></li>
+                  <li ><NavLink to="/Explore" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Explore</NavLink ></li>
                 </div>
                 <div className="nav-item">
                   <img src={BookmarkIcon} alt="Market" />
-                  <li><Link to="/About">Market</Link></li>
+                  <li><NavLink to="/Market" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Market</NavLink ></li>
                 </div>
                 <div className="nav-item">
                   <img src={ProfileIcon} alt="Profile" />
-                  <li><Link to="/About">Profile</Link></li>
+                  <li><NavLink to="/Profile" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Profile</NavLink ></li>
                 </div>
                 <div className="nav-item">
                   <img src={moreIcon} alt="More" />
-                  <li><Link to="/About">Settings</Link></li>
+                  <li><NavLink to="/Settings" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Settings</NavLink ></li>
                 </div>
               </ul>
             </div>
@@ -62,8 +63,10 @@ function App() {
         </div>
         <Routes>
           <Route exact path="/" element={<Landing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/Support" element={<Support />} />
+          <Route path="/Explore" element={<About />} />
+          <Route path="/Market" element={<Support />} />
+          <Route path="/Profile" element={<Support />} />
+          <Route path="/Settings" element={<Support />} />
         </Routes>
         <div className="right-side-bar">
           <RightSideBar />

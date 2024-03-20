@@ -230,18 +230,18 @@ body {
   cursor: pointer;
 }
 
-.pop-profile-stats{
+.pop-profile-stats {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
 
-.pop-profile-stats h2{
+.pop-profile-stats h2 {
   font-weight: 400;
   font-size: 15px;
 }
 
-.pop-profile-stats span{
+.pop-profile-stats span {
   font-weight: bold;
 }
 
