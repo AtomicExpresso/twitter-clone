@@ -13,8 +13,9 @@ import Landing from './pages/Landing';
 import About from './pages/About';
 import Support from './pages/Support';
 import { RightSideBar, FollowSuggest } from './componets/rightSideBar';
-function App() {
 
+//Display's the navbar and sidepanels
+function App() {
   return (
     <Router>
       <div className='main-container'>
