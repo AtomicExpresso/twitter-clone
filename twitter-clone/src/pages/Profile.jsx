@@ -1,5 +1,6 @@
-import { MainProfile, ProfileOne, ProfileTwo, ProfileThree, ProfileFour } from '../componets/storage/profileInfo';
+import { MainProfile } from '../componets/storage/profileInfo';
 
+//User's profile page
 function Profile() {
   return (
     <div className="profile-page-container">
