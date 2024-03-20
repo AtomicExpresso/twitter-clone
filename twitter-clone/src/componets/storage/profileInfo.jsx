@@ -15,7 +15,7 @@ const MainProfile = {
   ProfileUserName: `${symbol}johndoeofficial`,
   ProfileRealName: "John Doe",
   ProfileBio: "Welcome to my profile ig",
-  ProfileFollowingCount: "3",
+  ProfileFollowingCount: "21",
   ProfileFollowersCount: "3"
 }
 

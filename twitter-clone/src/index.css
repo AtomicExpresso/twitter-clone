@@ -424,10 +424,29 @@ body {
   cursor: pointer;
 }
 
+.profile-banner {
+  background-size: cover;
+  width: 50vw;
+  height: 200px;
+}
+
 .profile-pic img {
+  position: relative;
   height: 150px;
   border-radius: 50%;
-  border: solid 2px black;
+  border: solid 2px white;
+  margin: 120px 10px;
+}
+
+.profile-edit-btn button {
+  display: block;
+  margin-left: auto;
+  margin-top: 10px;
+  border-radius: 50px;
+}
+
+.profile-name-text {
+  margin: 30px 20px;
 }
 
 .profile-name-text h1 {
@@ -437,6 +456,21 @@ body {
 
 .profile-name-text h2 {
   font-size: 15px;
+  font-weight: 400;
+}
+
+.profile-follow-stats {
+  display: flex;
+  gap: 15px;
+}
+
+.profile-follow-stats span {
+  font-weight: bold;
+}
+
+.profile-follow-stats h2 {
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .main-container {
