@@ -9,7 +9,9 @@ import dotsPfpIcon from './assets/icons/dots.svg';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Landing from './pages/Landing';
-import About from './pages/About';
+import Settings from './pages/Settings';
+import Explore from './pages/Explore';
+import Messages from './pages/Messages';
 import Profile from './pages/Profile';
 import Support from './pages/Support';
 import { RightSideBar, FollowSuggest } from './componets/rightSideBar';
@@ -74,11 +76,11 @@ function App() {
         </div>
         <Routes>
           <Route exact path="/" element={<Landing />} />
-          <Route path="/Explore" element={<About />} />
+          <Route path="/Explore" element={<Explore />} />
+          <Route path="/Messages" element={<Messages />} />
           <Route path="/Market" element={<Support />} />
           <Route path="/Profile" element={<Profile />} />
-          <Route path="/Settings" element={<Support />} />
-          <Route path="/Explore" element={<Support />} />
+          <Route path="/Settings" element={<Settings />} />
         </Routes>
         <div className="right-side-bar">
           <RightSideBar />
