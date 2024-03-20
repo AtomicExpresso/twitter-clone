@@ -473,6 +473,17 @@ body {
   cursor: pointer;
 }
 
+.profile-content-tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-content-tabs h1 {
+  font-size: 20px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
 .main-container {
   display: flex;
   gap: 10px;

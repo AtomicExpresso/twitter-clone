@@ -27,6 +27,13 @@ function Profile() {
             </div>
           </div>
         </div>
+        <div className="profile-content-tabs">
+          <h1>Posts</h1>
+          <h1>Replies</h1>
+          <h1>Media</h1>
+          <h1>Likes</h1>
+        </div>
+        <hr></hr>
       </div>
     </div>
   )
