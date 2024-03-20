@@ -10,6 +10,8 @@ body {
 }
 
 .nav {
+  position: sticky;
+  top: 0;
   width: 250px;
   height: 100vh;
   background-color: white;

@@ -1,7 +1,8 @@
+import { useState } from "react"
 import articleImageOne from '../assets/articleone.webp';
 import articleImageTwo from '../assets/articleone.webp';
 import articleImageThree from '../assets/articletwo.webp';
-import {ProfileThree, ProfileFour} from '../componets/storage/profileInfo';
+import { ProfileThree, ProfileFour } from '../componets/storage/profileInfo';
 
 function CreateArticle({ type, articleDate, articleDesc, articleImg, articleTrend }) {
   return (
@@ -29,22 +30,58 @@ function CreateArticle({ type, articleDate, articleDesc, articleImg, articleTren
   )
 };
 
-function CreateFollowSuggest({ profilePic, fullName, Username }) {
+function CreateFollowSuggest({ profilePic, fullName, Username, profileBio, followingCount, followersCount, badge }) {
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   return (
     <div className="follow-suggest-inner-content">
       <div className="person-row">
-        <div className="person-pfp">
+        <div className="person-pfp" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <img src={profilePic} alt="" />
         </div>
         <div className="person-text">
           <h1>{fullName}</h1>
           <h1>{Username}</h1>
+          {badge && <img src={badge} alt="Verified" />}
         </div>
         <div className="follow-btn">
           <button className='btn btn-primary'>Follow</button>
         </div>
       </div>
       <hr></hr>
+      {isHovering && (
+        <div className="popup" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div className="popup-top-bar">
+            <div className="pop-img">
+              <img src={profilePic} alt="pfp" />
+            </div>
+            <button className="btn btn-primary">Follow</button>
+          </div>
+          <div className="pop-text">
+            <div className="pop-name-container">
+              <h1>{fullName}</h1>
+              {badge && <img src={badge} alt="Verified" />}
+            </div>
+            <h2>{Username}</h2>
+          </div>
+          <div className="popup-desc">
+            <p>{profileBio}</p>
+          </div>
+          <div className="pop-profile-stats">
+            <h2><span>{followingCount}</span> Following</h2>
+            <h2><span>{followersCount}</span> Followers</h2>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
@@ -95,11 +132,19 @@ const FollowSuggest = () => {
         profilePic={ProfileThree.ProfilePic}
         fullName={ProfileThree.ProfileRealName}
         Username={ProfileThree.ProfileUserName}
+        profileBio={ProfileThree.ProfileBio}
+        followingCount={ProfileThree.ProfileFollowingCount}
+        followersCount={ProfileThree.ProfileFollowersCount}
+        badge={ProfileThree.ProfileBadge}
       />
       <CreateFollowSuggest
         profilePic={ProfileFour.ProfilePic}
         fullName={ProfileFour.ProfileRealName}
         Username={ProfileFour.ProfileUserName}
+        profileBio={ProfileFour.ProfileBio}
+        followingCount={ProfileFour.ProfileFollowingCount}
+        followersCount={ProfileFour.ProfileFollowersCount}
+        badge={ProfileFour.ProfileBadge}
       />
       <div className="follow-suggest-bottom-bar">
         <a>Show more</a>

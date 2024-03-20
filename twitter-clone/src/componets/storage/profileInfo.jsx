@@ -31,6 +31,7 @@ const ProfileTwo = {
 
 const ProfileThree = {
   ProfilePic: pfpFour,
+  ProfileBadge: null,
   ProfileUserName: `${symbol}somedude781`,
   ProfileRealName: "Kyle Morgan",
   ProfileBio: "LOL",
