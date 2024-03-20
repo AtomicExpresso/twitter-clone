@@ -1,11 +1,9 @@
-import { useState } from 'react'
 import Logo from './assets/icons/logo.svg';
 import HomeIcon from './assets/icons/home.svg';
 import ExploreIcon from './assets/icons/explore.svg';
 import BookmarkIcon from './assets/icons/bookmark.svg';
 import ProfileIcon from './assets/icons/profile.svg';
 import moreIcon from './assets/icons/more.svg';
-import profilePic from './assets/pfp.png';
 import dotsPfpIcon from './assets/icons/dots.svg';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
@@ -14,6 +12,7 @@ import About from './pages/About';
 import Profile from './pages/Profile';
 import Support from './pages/Support';
 import { RightSideBar, FollowSuggest } from './componets/rightSideBar';
+import { MainProfile } from './componets/storage/profileInfo';
 
 //Display's the navbar and sidepanels
 function App() {
@@ -60,10 +59,10 @@ function App() {
             </div>
           </nav>
           <div className="nav-bottom-bar">
-            <img src={profilePic} alt="pfp" onClick={navigateToProfile} />
+            <img src={MainProfile.ProfilePic} alt="pfp" onClick={navigateToProfile} />
             <div className="nav-bottom-bar-text">
-              <h1 onClick={navigateToProfile}>John Doe</h1>
-              <h1 onClick={navigateToProfile}>@Johndoeoffical</h1>
+              <h1 onClick={navigateToProfile}>{MainProfile.ProfileRealName}</h1>
+              <h1 onClick={navigateToProfile}>{MainProfile.ProfileUserName}</h1>
             </div>
             <img src={dotsPfpIcon} alt="settings" />
           </div>
