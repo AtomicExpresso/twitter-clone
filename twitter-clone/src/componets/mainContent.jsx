@@ -5,20 +5,26 @@ import dots from '../assets/icons/dots.svg'
 import commentIcon from '../assets/icons/comment.svg';
 import repostIcon from '../assets/icons/repost.svg';
 import likeIcon from '../assets/icons/like.svg';
+import likedIcon from '../assets/icons/likedpost.svg';
 import shareIcon from '../assets/icons/share.svg';
 
 
 //Construct posts
-function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postDesc, commentCount, repostCount, likeCount, shareCount, badge, followingCount, followersCount }) {
-
+function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postDesc, commentCount, repostCount, shareCount, badge, followingCount, followersCount }) {
   const [isHovering, setIsHovering] = useState(false);
+  const [likeCount, setLikeCount] = useState(0); //for like counting
 
   const handleMouseEnter = () => {
     setIsHovering(true);
   };
-
   const handleMouseLeave = () => {
     setIsHovering(false);
+  };
+  const [isLiked, setIsLiked] = useState(false);
+  //if user likes post, increment by 1, if they unlike it decrement it
+  const likeAnimation = () => {
+    setIsLiked(!isLiked);
+    setLikeCount(prevCount => isLiked ? prevCount - 1 : prevCount + 1);
   };
 
   return (
@@ -31,7 +37,7 @@ function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postD
           <div className="top-text">
             <h1>{realName}</h1>
             <h2>{userName}</h2>
-            <p>•</p>
+            <h2>•</h2>
             <h2>{timePosted}</h2>
             {badge && <img src={badge} alt="Verified" />}
           </div>
@@ -52,7 +58,7 @@ function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postD
               <p>{repostCount}</p>
             </div>
             <div className="icon-item">
-              <img src={likeIcon} alt="like" />
+              <img src={isLiked ? likedIcon : likeIcon} alt="like" onClick={likeAnimation} />
               <p>{likeCount}</p>
             </div>
             <div className="icon-item">
@@ -96,7 +102,6 @@ function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postD
 
 //Display posts
 export default function DisplayPost() {
-
   return (
     <>
       <CreatePost
