@@ -177,6 +177,72 @@ body {
   cursor: pointer;
 }
 
+.popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.popup-top-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+}
+
+.popup-top-bar button {
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.pop-name-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.pop-name-container h1 {
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.pop-name-container img {
+  height: 22px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.pop-text h2 {
+  font-weight: 300;
+  color: #5B7083;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.pop-img img {
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pop-profile-stats{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.pop-profile-stats h2{
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.pop-profile-stats span{
+  font-weight: bold;
+}
+
 .icon-row {
   display: flex;
   flex-direction: row;

@@ -14,7 +14,9 @@ const ProfileOne = {
   ProfileBadge: verified,
   ProfileUserName: `${symbol}bob123`,
   ProfileRealName: "Bob",
-  ProfileBio: "Hi idk what to put here"
+  ProfileBio: "Hi idk what to put here",
+  ProfileFollowingCount: "276",
+  ProfileFollowersCount: "103"
 }
 
 const ProfileTwo = {
@@ -22,21 +24,27 @@ const ProfileTwo = {
   ProfileBadge: null,
   ProfileUserName: `${symbol}throwaway6382`,
   ProfileRealName: "Some dude",
-  ProfileBio: "Capybara supremecey"
+  ProfileBio: "Capybara supremecey",
+  ProfileFollowingCount: "1.5k",
+  ProfileFollowersCount: "5.7k"
 }
 
 const ProfileThree = {
   ProfilePic: pfpFour,
   ProfileUserName: `${symbol}somedude781`,
   ProfileRealName: "Kyle Morgan",
-  ProfileBio: "LOL"
+  ProfileBio: "LOL",
+  ProfileFollowingCount: "3.8k",
+  ProfileFollowersCount: "819.4k"
 }
 
 const ProfileFour = {
   ProfilePic: pfpFive,
   ProfileUserName: `${symbol}smith808`,
   ProfileRealName: "Beth Smith",
-  ProfileBio: "Hamburger"
+  ProfileBio: "Hamburger",
+  ProfileFollowingCount: "2",
+  ProfileFollowersCount: "14"
 }
 
 export { ProfileOne, ProfileTwo, ProfileThree, ProfileFour }

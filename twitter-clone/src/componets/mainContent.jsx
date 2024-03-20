@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { postDesk, postDeskTwo } from './postDesc';
 import { ProfileOne, ProfileTwo } from '../componets/storage/profileInfo';
 import dots from '../assets/icons/dots.svg'
@@ -6,10 +7,23 @@ import repostIcon from '../assets/icons/repost.svg';
 import likeIcon from '../assets/icons/like.svg';
 import shareIcon from '../assets/icons/share.svg';
 
-function CreatePost({ pfp, realName, userName, timePosted, postDesc, commentCount, repostCount, likeCount, shareCount, badge }) {
+
+//Construct posts
+function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postDesc, commentCount, repostCount, likeCount, shareCount, badge, followingCount, followersCount }) {
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   return (
     <div className="post-content">
-      <div className="pfp">
+      <div className="pfp" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <img src={pfp}></img>
       </div>
       <div className="post-content-inner-container">
@@ -49,19 +63,46 @@ function CreatePost({ pfp, realName, userName, timePosted, postDesc, commentCoun
         </div>
       </div>
       <div className="post-config">
-        <img src={dots} alt="settings"/>
+        <img src={dots} alt="settings" />
       </div>
+      {isHovering && (
+        <div className="popup" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div className="popup-top-bar">
+            <div className="pop-img">
+              <img src={pfp} alt="pfp" />
+            </div>
+            <button className="btn btn-primary">Follow</button>
+          </div>
+          <div className="pop-text">
+            <div className="pop-name-container">
+              <h1>{realName}</h1>
+              {badge && <img src={badge} alt="Verified" />}
+            </div>
+            <h2>{userName}</h2>
+          </div>
+          <div className="popup-desc">
+            <p>{profileBio}</p>
+          </div>
+          <div className="pop-profile-stats">
+            <h2><span>{followingCount}</span> Following</h2>
+            <h2><span>{followersCount}</span> Followers</h2>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 
-
+//Display posts
 export default function DisplayPost() {
+
   return (
     <>
       <CreatePost
+        id="userOne"
         pfp={ProfileOne.ProfilePic}
+        profileBio={ProfileOne.ProfileBio}
         realName={ProfileOne.ProfileRealName}
         userName={ProfileOne.ProfileUserName}
         badge={ProfileOne.ProfileBadge}
@@ -71,9 +112,13 @@ export default function DisplayPost() {
         repostCount={1}
         likeCount={20}
         shareCount={450}
+        followingCount={ProfileOne.ProfileFollowingCount}
+        followersCount={ProfileOne.ProfileFollowersCount}
       />
       <CreatePost
+        id="userTwo"
         pfp={ProfileTwo.ProfilePic}
+        profileBio={ProfileTwo.ProfileBio}
         realName={ProfileTwo.ProfileRealName}
         userName={ProfileTwo.ProfileUserName}
         badge={ProfileTwo.ProfileBadge}
@@ -83,7 +128,11 @@ export default function DisplayPost() {
         repostCount={100}
         likeCount={70}
         shareCount={10}
+        followingCount={ProfileTwo.ProfileFollowingCount}
+        followersCount={ProfileTwo.ProfileFollowersCount}
       />
     </>
   );
 }
+
+export { DisplayPost };
