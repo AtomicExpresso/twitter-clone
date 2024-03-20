@@ -9,6 +9,16 @@ import pfpFive from '../../assets/pfpFive.png';
 
 const symbol = '@';
 
+const MainProfile = {
+  ProfilePic: pfpOne,
+  ProfileBadge: verified,
+  ProfileUserName: `${symbol}johndoeofficial`,
+  ProfileRealName: "John Doe",
+  ProfileBio: "Welcome to my profile ig",
+  ProfileFollowingCount: "3",
+  ProfileFollowersCount: "3"
+}
+
 const ProfileOne = {
   ProfilePic: pfpTwo,
   ProfileBadge: verified,
@@ -48,4 +58,4 @@ const ProfileFour = {
   ProfileFollowersCount: "14"
 }
 
-export { ProfileOne, ProfileTwo, ProfileThree, ProfileFour }
+export { MainProfile, ProfileOne, ProfileTwo, ProfileThree, ProfileFour }
