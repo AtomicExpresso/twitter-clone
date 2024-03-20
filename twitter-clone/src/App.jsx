@@ -11,11 +11,17 @@ import './index.css';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Landing from './pages/Landing';
 import About from './pages/About';
+import Profile from './pages/Profile';
 import Support from './pages/Support';
 import { RightSideBar, FollowSuggest } from './componets/rightSideBar';
 
 //Display's the navbar and sidepanels
 function App() {
+
+  const navigateToProfile = () => {
+    window.location.href = '/Profile';
+  };
+
   return (
     <Router>
       <div className='main-container'>
@@ -54,10 +60,10 @@ function App() {
             </div>
           </nav>
           <div className="nav-bottom-bar">
-            <img src={profilePic} alt="pfp" />
+            <img src={profilePic} alt="pfp" onClick={navigateToProfile} />
             <div className="nav-bottom-bar-text">
-              <h1>John Doe</h1>
-              <h1>@Johndoeoffical</h1>
+              <h1 onClick={navigateToProfile}>John Doe</h1>
+              <h1 onClick={navigateToProfile}>@Johndoeoffical</h1>
             </div>
             <img src={dotsPfpIcon} alt="settings" />
           </div>
@@ -66,8 +72,9 @@ function App() {
           <Route exact path="/" element={<Landing />} />
           <Route path="/Explore" element={<About />} />
           <Route path="/Market" element={<Support />} />
-          <Route path="/Profile" element={<Support />} />
+          <Route path="/Profile" element={<Profile />} />
           <Route path="/Settings" element={<Support />} />
+          <Route path="/Explore" element={<Support />} />
         </Routes>
         <div className="right-side-bar">
           <RightSideBar />
