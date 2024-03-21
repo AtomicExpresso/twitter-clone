@@ -34,7 +34,7 @@ function AppContent() {
     window.location.href = '/Profile';
   };
 
-  const showRightSideBar = location.pathname === '/' || location.pathname === '/Profile' ||  location.pathname === '/Explore';
+  const showRightSideBar = location.pathname === '/' || location.pathname === '/Profile' ||  location.pathname === '/Explore'; //Displays the right sidebar, only when your on specific pages
 
   return (
     <div className='main-container'>
