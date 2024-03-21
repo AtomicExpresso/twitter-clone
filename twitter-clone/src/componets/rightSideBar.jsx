@@ -106,7 +106,7 @@ const RightSideBar = () => {
           <CreateArticle
             type="Sports"
             articleDate="3/18/2024"
-            articleDesc="India vs Australia: India hold on to earn a draw on Day 5 in Sydney"
+            articleDesc="India vs Australia: India to earn a draw on Day 5 in Sydney"
             articleImg={articleImageTwo}
             articleTrend="Trending with #football"
           />
