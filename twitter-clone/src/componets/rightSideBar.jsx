@@ -99,14 +99,14 @@ const RightSideBar = () => {
           <CreateArticle
             type="Europe"
             articleDate="3/17/2024"
-            articleDesc="Ukraine joins EU"
+            articleDesc="Something happens in europe"
             articleImg={articleImageOne}
             articleTrend="Trending with #lmao"
           />
           <CreateArticle
             type="Sports"
             articleDate="3/18/2024"
-            articleDesc="India vs Australia: India hold on to earn a draw on Day 5 in Sydney Test"
+            articleDesc="India vs Australia: India hold on to earn a draw on Day 5 in Sydney"
             articleImg={articleImageTwo}
             articleTrend="Trending with #football"
           />
