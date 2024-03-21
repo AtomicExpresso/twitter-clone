@@ -489,6 +489,46 @@ body {
   color: rgb(0, 136, 255);
 }
 
+.settings-container input {
+  border-radius: 20px;
+  border: none;
+  background-color: #eff3f4;
+  height: 35px;
+  width: 250px;
+}
+
+.settings-container input::placeholder {
+  padding-left: 10px;
+}
+
+.settings-container input:focus {
+  outline: none;
+  border: solid 1px rgb(0, 136, 255);
+  ;
+}
+
+.settings-side-bar-mid{
+  margin-top: 35px;
+}
+
+.settings-side-bar-mid h1 {
+  font-size: 20px;
+  list-style: none;
+}
+
+.settings-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.settings-item img {
+  height: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .main-container {
   display: flex;
   gap: 10px;
