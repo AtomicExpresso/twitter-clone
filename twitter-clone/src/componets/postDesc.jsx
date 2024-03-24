@@ -6,4 +6,8 @@ const postDeskTwo = {
   postDescPara: "Varius vel pharetra vel turpis nunc eget lorem dolor."
 }
 
-export { postDesk, postDeskTwo };
+const postDeskThree = {
+  postDescPara: "abore et dolore"
+}
+
+export { postDesk, postDeskTwo, postDeskThree };
