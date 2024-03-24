@@ -12,7 +12,8 @@ body {
 .nav {
   position: sticky;
   top: 0;
-  width: 250px;
+  padding-right: 5px;
+  width: 200px;
   height: 100vh;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -63,7 +64,7 @@ body {
 }
 
 .nav-btn button {
-  width: 200px;
+  width: 150px;
   border-radius: 50px;
   margin-left: 10%;
 }
@@ -71,7 +72,7 @@ body {
 .nav-bottom-bar {
   display: flex;
   flex-direction: row;
-  margin-left: 20px;
+  margin-left: 3px;
   margin-top: auto;
 }
 
@@ -84,10 +85,6 @@ body {
   height: 42px;
   border-radius: 50%;
   cursor: pointer;
-}
-
-.nav-bottom-bar img:nth-last-child(1) {
-  margin-left: 20px;
 }
 
 .nav-bottom-bar-text h1:nth-child(1) {

@@ -6,15 +6,14 @@ import BookmarkIcon from './assets/icons/bookmark.svg';
 import ProfileIcon from './assets/icons/profile.svg';
 import MessagesIcon from './assets/icons/messages.svg';
 import moreIcon from './assets/icons/more.svg';
-import dotsPfpIcon from './assets/icons/dots.svg';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes, NavLink, useLocation } from 'react-router-dom';
 import Landing from './pages/Landing';
+import Bookmarks from './pages/Bookmarks';
 import Settings from './pages/Settings';
 import Explore from './pages/Explore';
 import Messages from './pages/Messages';
 import Profile from './pages/Profile';
-import Support from './pages/Support';
 import { RightSideBar, FollowSuggest } from './componets/rightSideBar';
 import { MainProfile } from './componets/storage/profileInfo';
 
@@ -55,7 +54,7 @@ function AppContent() {
               </div>
               <div className="nav-item">
                 <img src={BookmarkIcon} alt="Market" />
-                <li><NavLink to="/Market" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Market</NavLink ></li>
+                <li><NavLink to="/Bookmarks" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Bookmarks</NavLink ></li>
               </div>
               <div className="nav-item">
                 <img src={MessagesIcon} alt="Messages" />
@@ -81,14 +80,13 @@ function AppContent() {
             <h1 onClick={navigateToProfile}>{MainProfile.ProfileRealName}</h1>
             <h1 onClick={navigateToProfile}>{MainProfile.ProfileUserName}</h1>
           </div>
-          <img src={dotsPfpIcon} alt="settings" />
         </div>
       </div>
       <Routes>
         <Route exact path="/" element={<Landing />} />
         <Route path="/Explore" element={<Explore />} />
         <Route path="/Messages" element={<Messages />} />
-        <Route path="/Market" element={<Support />} />
+        <Route path="/Bookmarks" element={<Bookmarks />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Settings" element={<Settings />} />
       </Routes>
