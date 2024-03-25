@@ -1,5 +1,6 @@
 import ScreenShotOne from '../assets/profile-content/screenshots/image.jpeg';
 
+//Post descriptions, and images
 const postDesk = {
   postDescPara: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris commodo quis imperdiet massa tincidunt. Varius vel pharetra vel turpis nunc eget lorem dolor."
 }

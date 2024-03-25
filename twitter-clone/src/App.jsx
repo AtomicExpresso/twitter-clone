@@ -45,27 +45,27 @@ function AppContent() {
             </div>
             <ul>
               <div className="nav-item">
-                <img src={HomeIcon} alt="Home" />
+                <NavLink to="/" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}><img src={HomeIcon} alt="Home" /></NavLink >
                 <li><NavLink to="/" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Home</NavLink ></li>
               </div>
               <div className="nav-item">
-                <img src={ExploreIcon} alt="Explore" />
+                <NavLink to="/Explore" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}><img src={ExploreIcon} alt="Explore" /></NavLink >
                 <li ><NavLink to="/Explore" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Explore</NavLink ></li>
               </div>
               <div className="nav-item">
-                <img src={BookmarkIcon} alt="Market" />
+              <NavLink to="/Bookmarks" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}><img src={BookmarkIcon} alt="Market" /></NavLink >
                 <li><NavLink to="/Bookmarks" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Bookmarks</NavLink ></li>
               </div>
               <div className="nav-item">
-                <img src={MessagesIcon} alt="Messages" />
+                <NavLink to="/Messages" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}><img src={MessagesIcon} alt="Messages" /></NavLink >
                 <li><NavLink to="/Messages" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Messages</NavLink ></li>
               </div>
               <div className="nav-item">
-                <img src={ProfileIcon} alt="Profile" />
+                <NavLink to="/Profile" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}><img src={ProfileIcon} alt="Profile" /></NavLink >
                 <li><NavLink to="/Profile" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Profile</NavLink ></li>
               </div>
               <div className="nav-item">
-                <img src={moreIcon} alt="More" />
+                <NavLink to="/Settings" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}><img src={moreIcon} alt="More" /></NavLink >
                 <li><NavLink to="/Settings" style={({ isActive }) => ({ color: isActive ? '#0088ff' : 'black' })}>Settings</NavLink ></li>
               </div>
             </ul>
