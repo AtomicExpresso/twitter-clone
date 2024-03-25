@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { postDesk, postDeskTwo, postDeskThree } from './postDesc';
-import { ProfileOne, ProfileTwo, ProfileThree } from '../componets/storage/profileInfo';
+import { postDesk, postDeskTwo, postDeskThree, postDeskFour } from './postDesc';
+import { MainProfile, ProfileOne, ProfileTwo, ProfileThree } from '../componets/storage/profileInfo';
 import dots from '../assets/icons/dots.svg'
 import commentIcon from '../assets/icons/comment.svg';
 import repostIcon from '../assets/icons/repost.svg';
@@ -153,6 +153,23 @@ export default function DisplayPost() {
         shareCount={320}
         followingCount={ProfileThree.ProfileFollowingCount}
         followersCount={ProfileThree.ProfileFollowersCount}
+      />
+      <CreatePost
+        id="mainProfile"
+        pfp={MainProfile.ProfilePic}
+        profileBio={MainProfile.ProfileBio}
+        realName={MainProfile.ProfileRealName}
+        userName={MainProfile.ProfileUserName}
+        badge={MainProfile.ProfileBadge}
+        timePosted="6h"
+        postDesc={postDeskFour.postDescPara}
+        commentCount={56}
+        repostCount={212}
+        likeCount={70}
+        shareCount={320}
+        followingCount={MainProfile.ProfileFollowingCount}
+        followersCount={MainProfile.ProfileFollowersCount}
+        postImg={postDeskFour.postImg}
       />
     </>
   );

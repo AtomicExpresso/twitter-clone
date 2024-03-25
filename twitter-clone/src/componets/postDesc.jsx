@@ -1,4 +1,5 @@
 import ScreenShotOne from '../assets/profile-content/screenshots/image.jpeg';
+import ScreenShotTwo from '../assets/profile-content/screenshots/imagetwo.png';
 
 //Post descriptions, and images
 const postDesk = {
@@ -14,4 +15,9 @@ const postDeskThree = {
   postDescPara: "abore et dolore"
 }
 
-export { postDesk, postDeskTwo, postDeskThree };
+const postDeskFour = {
+  postDescPara: "Varius vel pharetra vel turpis nunc eget lorem dolor.",
+  postImg: ScreenShotTwo
+}
+
+export { postDesk, postDeskTwo, postDeskThree, postDeskFour };

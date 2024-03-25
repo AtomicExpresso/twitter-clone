@@ -159,6 +159,7 @@ body {
 .post-desc img {
   border-radius: 10px;
   cursor: pointer;
+  width: 60%;
 }
 
 .top-bar {
