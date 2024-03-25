@@ -139,6 +139,11 @@ body {
   padding: 10px;
 }
 
+.post-desc img{
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .top-bar {
   display: flex;
   flex-direction: row;

@@ -10,7 +10,7 @@ import shareIcon from '../assets/icons/share.svg';
 
 
 //Construct posts
-function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postDesc, commentCount, repostCount, shareCount, badge, followingCount, followersCount }) {
+function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postDesc, commentCount, repostCount, shareCount, badge, followingCount, followersCount, postImg }) {
   const [isHovering, setIsHovering] = useState(false);
   const [likeCount, setLikeCount] = useState(0); //for like counting
 
@@ -45,6 +45,7 @@ function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postD
         <div className="post-inner-content">
           <div className="post-desc">
             <p>{postDesc}</p>
+            {postImg && <img src={postImg} alt="Verified" />}
           </div>
         </div>
         <div className="bottom-bar">
@@ -135,6 +136,7 @@ export default function DisplayPost() {
         shareCount={10}
         followingCount={ProfileTwo.ProfileFollowingCount}
         followersCount={ProfileTwo.ProfileFollowersCount}
+        postImg={postDeskTwo.postImg}
       />
       <CreatePost
         id="userThree"
