@@ -15,7 +15,10 @@ function Profile() {
       </div>
       <div className="profile-top-bar">
         <div className="profile-name-text">
-          <h1>{MainProfile.ProfileRealName}</h1>
+          <div className='profile-name-container'>
+            <h1>{MainProfile.ProfileRealName}</h1>
+            <img src={MainProfile.ProfileBadge} title='Verifed by Twitter'></img>
+          </div>
           <h2>{MainProfile.ProfileUserName}</h2>
           <div className="profile-mid-bar">
             <div className="profile-desc">

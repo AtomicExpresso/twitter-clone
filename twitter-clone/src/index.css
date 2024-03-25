@@ -98,6 +98,17 @@ body {
   cursor: pointer;
 }
 
+.nav-profile-real-name-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-profile-real-name-container img{
+  width: 15px;
+  height: 15px;
+  margin: auto 5px;
+}
+
 .nav-bottom-bar-text h1:nth-child(1) {
   margin-top: 10px;
 }
@@ -464,6 +475,15 @@ body {
   margin: 120px 10px;
 }
 
+.profile-name-container {
+  display: flex;
+  gap: 5px;
+}
+
+.profile-name-container img {
+  width: 4%;
+}
+
 .profile-edit-btn button {
   display: block;
   margin-left: auto;
@@ -593,6 +613,10 @@ body {
   .news-content,
   .follow-suggest-container,
   .right-side-bar {
+    display: none;
+  }
+
+  .nav-profile-real-name-container img{
     display: none;
   }
 

@@ -39,13 +39,13 @@ function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postD
             <h2>{userName}</h2>
             <h2>•</h2>
             <h2>{timePosted}</h2>
-            {badge && <img src={badge} alt="Verified" />}
+            {badge && <img src={badge} alt="Verified" title='Verifed by Twitter'/>}
           </div>
         </div>
         <div className="post-inner-content">
           <div className="post-desc">
             <p>{postDesc}</p>
-            {postImg && <img src={postImg} alt="Verified" />}
+            {postImg && <img src={postImg} alt="Post image" />}
           </div>
         </div>
         <div className="bottom-bar">
@@ -83,7 +83,7 @@ function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postD
           <div className="pop-text">
             <div className="pop-name-container">
               <h1>{realName}</h1>
-              {badge && <img src={badge} alt="Verified" />}
+              {badge && <img src={badge} alt="Verified" title='Verifed by Twitter'/>}
             </div>
             <h2>{userName}</h2>
           </div>
@@ -163,10 +163,10 @@ export default function DisplayPost() {
         badge={MainProfile.ProfileBadge}
         timePosted="6h"
         postDesc={postDeskFour.postDescPara}
-        commentCount={56}
-        repostCount={212}
-        likeCount={70}
-        shareCount={320}
+        commentCount={124}
+        repostCount={57}
+        likeCount={751}
+        shareCount={150}
         followingCount={MainProfile.ProfileFollowingCount}
         followersCount={MainProfile.ProfileFollowersCount}
         postImg={postDeskFour.postImg}

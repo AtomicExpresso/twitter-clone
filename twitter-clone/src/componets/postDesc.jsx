@@ -1,5 +1,5 @@
 import ScreenShotOne from '../assets/profile-content/screenshots/image.jpeg';
-import ScreenShotTwo from '../assets/profile-content/screenshots/imagetwo.png';
+import ScreenShotTwo from '../assets/profile-content/screenshots/imagetwo.jpg';
 
 //Post descriptions, and images
 const postDesk = {

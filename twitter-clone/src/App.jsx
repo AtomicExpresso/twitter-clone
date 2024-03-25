@@ -77,7 +77,10 @@ function AppContent() {
         <div className="nav-bottom-bar">
           <img src={MainProfile.ProfilePic} alt="pfp" onClick={navigateToProfile} />
           <div className="nav-bottom-bar-text">
-            <h1 onClick={navigateToProfile}>{MainProfile.ProfileRealName}</h1>
+            <div className='nav-profile-real-name-container'>
+              <h1 onClick={navigateToProfile}>{MainProfile.ProfileRealName}</h1>
+              <img src={MainProfile.ProfileBadge}></img>
+            </div>
             <h1 onClick={navigateToProfile}>{MainProfile.ProfileUserName}</h1>
           </div>
         </div>
