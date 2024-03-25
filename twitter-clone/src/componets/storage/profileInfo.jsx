@@ -12,7 +12,7 @@ const symbol = '@';
 const MainProfile = {
   ProfilePic: pfpOne,
   ProfileBadge: verified,
-  ProfileUserName: `${symbol}johndoeofficial`,
+  ProfileUserName: `${symbol}GuestAccount800`,
   ProfileRealName: "John Doe",
   ProfileBio: "Welcome to my profile ig",
   ProfileFollowingCount: "21",

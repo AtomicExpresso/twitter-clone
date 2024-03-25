@@ -14,6 +14,12 @@ function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postD
   const [isHovering, setIsHovering] = useState(false);
   const [likeCount, setLikeCount] = useState(0); //for like counting
 
+  const shareTwitter = () => { //Post current url to the real twitter, when you click share icon
+    const url = window.location.href;
+    window.open('https://twitter.com/intent/tweet?text=' + '&url=' + encodeURIComponent(url), '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');
+    return false;
+  };
+
   const handleMouseEnter = () => {
     setIsHovering(true);
   };
@@ -63,8 +69,8 @@ function CreatePost({ id, pfp, profileBio, realName, userName, timePosted, postD
               <p>{likeCount}</p>
             </div>
             <div className="icon-item">
-              <img src={shareIcon} alt="share" />
-              <p >{shareCount}</p>
+              <img src={shareIcon} alt="share" onClick={shareTwitter}/>
+              <p onClick={shareTwitter}>{shareCount}</p>
             </div>
           </div>
         </div>
